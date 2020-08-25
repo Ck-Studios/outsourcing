@@ -18,7 +18,7 @@ export default function ProcessContainer() {
     return (
         <>
             <Header/>
-            <div className="w-full bg-black-100">
+            <div className="w-full bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto py-120 flex justify-between items-center">
                     <div>
                         <h1 className="text-40 text-white font-bold">
@@ -36,7 +36,7 @@ export default function ProcessContainer() {
                     />
                 </div>
             </div>
-            <div className="w-full bg-black-200">
+            <div className="w-full bg-black-200 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto py-100 flex justify-between items-center flex-wrap">
                     {
                         process.map((item, index) => (
@@ -51,7 +51,7 @@ export default function ProcessContainer() {
                     }
                 </div>
             </div>
-            <div className="w-full bg-black-100 pt-140 pb-160">
+            <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440">
                 <Inquire/>
             </div>
             <Footer/>

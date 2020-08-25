@@ -10,29 +10,29 @@ export default function MainContainer() {
     return (
         <>
             <Header/>
-            <div className="w-full h-700 bg-black-100">
-                <div className="max-w-1080 h-full flex justify-center items-center mx-auto">
+            <div className="w-full desktop:h-700 bg-black-100 desktop:min-w-1440 mobile:pt-40">
+                <div className="h-full flex desktop:justify-center desktop:items-center desktop:mx-auto mobile:px-20 mobile:flex-col">
                     <motion.img
                         initial="initial"
                         animate="animate"
                         exit="exit"
                         variants={SCALE_UP()}
                         src="/static/images/main/phone.png"
-                        className="w-480 h-564 object-contain"
+                        className="w-480 h-564 mobile:w-306 mobile:h-360 object-contain mobile:order-2"
                     />
 
-                    <div className="ml-100">
+                    <div className="desktop:ml-100 mobile:order-1 mobile:mb-40">
                         <motion.p
-                            className="text-40 text-white leading-base font-bold"
+                            className="mobile:text-32 text-40 text-white leading-base font-bold"
                             initial="initial"
                             animate="animate"
                             variants={SLIDE_UP(0.5)}
                         >
-                            당신의 성공을 만들어내는<br/>
+                            당신의 성공을 <br className="desktop:hidden"/>만들어내는<br/>
                             외주 서비스.
                         </motion.p>
                         <motion.p
-                            className="leading2 text-white text-base mt-26 w-500"
+                            className="leading2 text-white text-base mt-26 mobile:mt-20 w-500 mobile:text-14"
                             initial="initial"
                             animate="animate"
                             variants={SLIDE_UP(0.8)}
@@ -45,22 +45,22 @@ export default function MainContainer() {
             </div>
 
             <IntersectionObserver>
-                <div className="w-full h-688 bg-black-200">
-                    <IntersectionView className="max-w-1080 h-full flex justify-between items-center mx-auto">
+                <div className="w-full desktop:h-688 bg-black-200 desktop:min-w-1440 mobile:py-80 mobile:px-20">
+                    <IntersectionView className="max-w-1080 h-full flex desktop:justify-between desktop:items-center mx-auto mobile:flex-col">
                         <div>
                             <p
-                                className="text-40 text-white leading-base font-bold"
+                                className="text-40 text-white leading-base font-bold mobile:text-32"
                             >
                                 스타트업 DNA니까<br/>
                                 빠르고 트렌디하게.
                             </p>
                             <p
-                                className="leading2 text-white text-base mt-26 w-500"
+                                className="leading2 text-white text-base mt-26 mobile:text-14 mobile:mt-20 mobile:mb-40"
                             >
                                 기존 업체처럼 획일화된 디자인에 솔루션 재활용으로 지치셨다면<br/>
                                 시냅스 팀을 만나보세요. 린하게 고퀄리티 제품을 만듭니다.
                             </p>
-                            <a className="block mt-80">
+                            <a className="block desktop:mt-80">
                                 <IntersectionView
                                     variants={FADE_IN(1)}
                                     initial="initial"
@@ -76,22 +76,23 @@ export default function MainContainer() {
                         </div>
                         <IntersectionView
                             variants={FADE_IN(0)}
+                            className="mobile:mt-40 mobile:flex mobile:justify-center"
                         >
                             <img
                                 src="/static/images/main/rocket.png"
-                                className="w-480 h-438 object-contain"
+                                className="w-480 h-438 object-contain mobile:w-280 mobile:h-290"
                             />
                         </IntersectionView>
                     </IntersectionView>
                 </div>
             </IntersectionObserver>
 
-            <div className="w-full bg-black-100 pb-183">
-                <IntersectionObserver>
-                    <div className="max-w-1080 pt-170 mx-auto">
+            <IntersectionObserver>
+                <div className="w-full bg-black-100 desktop:pb-183 desktop:min-w-1440 mobile:py-80 mobile:px-20">
+                    <div className="max-w-1080 desktop:pt-170 mx-auto">
                         <div className="mb-112">
                             <IntersectionView
-                                className="text-40 text-white leading-base font-bold"
+                                className="text-40 mobile:text-32 text-white leading-base font-bold"
                                 variants={SLIDE_LEFT}
                                 initial="initial"
                                 animate="animate"
@@ -100,12 +101,12 @@ export default function MainContainer() {
                                 내부 전문 인력과 함께.
                             </IntersectionView>
                             <IntersectionView
-                                className="leading2 text-white text-base mt-26 w-500"
+                                className="leading2 text-white text-base mt-26"
                                 variants={FADE_IN(0.3)}
                                 initial="initial"
                                 animate="animate"
                             >
-                                개인 프리랜서가 아닌 법인 회사니까 느린 피드백, 연락두절 걱정 없죠.
+                                개인 프리랜서가 아닌 법인 회사니까 <br /> 느린 피드백, 연락두절 걱정 없죠.
                             </IntersectionView>
                         </div>
                         <div className="flex">
@@ -204,11 +205,11 @@ export default function MainContainer() {
                             </IntersectionView>
                         </div>
                     </div>
-                </IntersectionObserver>
-            </div>
+                </div>
+            </IntersectionObserver>
 
             <IntersectionObserver>
-                <div className="w-full bg-black-200">
+                <div className="w-full bg-black-200 desktop:min-w-1440">
                     <div className="max-w-1080 h-full mx-auto pt-100 pb-100">
                         <div className="flex justify-between">
                             <div className="mt-100">
@@ -290,7 +291,7 @@ export default function MainContainer() {
                                         className="w-200 h-430"
                                     />
                                 </IntersectionView>
-                                <IntersectionView 
+                                <IntersectionView
                                     className="flex flex-col items-center ml-40"
                                     variants={SLIDE_UP2(0.9)}
                                 >
@@ -306,7 +307,7 @@ export default function MainContainer() {
                                         className="w-200 h-430"
                                     />
                                 </IntersectionView>
-                                <IntersectionView 
+                                <IntersectionView
                                     className="flex flex-col items-center ml-40"
                                     variants={SLIDE_UP2(1)}
                                 >
@@ -328,7 +329,7 @@ export default function MainContainer() {
                 </div>
             </IntersectionObserver>
 
-            <div className="w-full bg-black-100 pt-275 pb-160">
+            <div className="w-full bg-black-100 pt-275 pb-160 desktop:min-w-1440">
                 <Inquire/>
             </div>
             <Footer/>

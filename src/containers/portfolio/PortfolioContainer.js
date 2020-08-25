@@ -6,7 +6,7 @@ export default function PortfolioContainer() {
     return (
         <>
             <Header/>
-            <div className="w-full py-80 bg-black-100">
+            <div className="w-full py-80 bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 h-full flex justify-between items-center mx-auto">
                     <div>
                         <p className="text-40 text-white font-bold">
@@ -25,7 +25,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="pt-80 pb-100 bg-black-200">
+            <div className="pt-80 pb-100 bg-black-200 desktop:min-w-1440">
                 <div className="max-w-1080 h-full mx-auto">
                     <div className="flex">
                         <img
@@ -56,7 +56,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="pt-80 pb-100 bg-black-100">
+            <div className="pt-80 pb-100 bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 h-full mx-auto">
                     <div className="flex">
                         <img
@@ -87,7 +87,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="pt-80 pb-100 bg-black-200">
+            <div className="pt-80 pb-100 bg-black-200 desktop:min-w-1440">
                 <div className="max-w-1080 h-full mx-auto">
                     <div className="flex">
                         <img
@@ -118,7 +118,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="pt-80 pb-100 bg-black-100">
+            <div className="pt-80 pb-100 bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 h-full mx-auto">
                     <div className="flex">
                         <img
@@ -149,7 +149,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="pt-80 pb-100 bg-black-200">
+            <div className="pt-80 pb-100 bg-black-200 desktop:min-w-1440">
                 <div className="max-w-1080 h-full mx-auto">
                     <div className="flex">
                         <img
@@ -180,7 +180,7 @@ export default function PortfolioContainer() {
                 </div>
             </div>
 
-            <div className="w-full bg-black-100 pt-140 pb-160">
+            <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440">
                 <Inquire/>
             </div>
             <Footer/>

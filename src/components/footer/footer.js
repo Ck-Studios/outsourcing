@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="w-full h-220 pt-60 bg-black-200">
+        <div className="w-full h-220 pt-60 bg-black-200 desktop:min-w-1440">
             <div className="max-w-1080 flex mx-auto">
                 <img
                     src="/static/images/logo2.png"

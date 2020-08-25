@@ -24,7 +24,7 @@ export default function ServiceContainer() {
     return (
         <>
             <Header/>
-            <div className="w-full pt-140 bg-black-100">
+            <div className="w-full pt-140 bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto">
                     <div className="flex justify-between items-center">
                         <div>

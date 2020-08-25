@@ -6,7 +6,7 @@ export default function TeamContainer() {
     return (
         <>
             <Header/>
-            <div className="w-full bg-black-100">
+            <div className="w-full bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto pt-80 pb-170 flex justify-between items-center">
                     <div className="pt-50">
                         <h1 className="text-40 text-white font-bold">
@@ -24,7 +24,7 @@ export default function TeamContainer() {
                     />
                 </div>
             </div>
-            <div className="w-full bg-black-200">
+            <div className="w-full bg-black-200 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto pt-100 pb-140 flex justify-between items-center flex-wrap relative">
                     <div className="w-200 h-200 bg-black-200 border border-white rounded-full text-white font-bold flex justify-center items-center self-stretch relative z-10">
                         시냅스 팀
@@ -71,7 +71,7 @@ export default function TeamContainer() {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-black-100 pt-140 pb-160">
+            <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440">
                 <Inquire/>
             </div>
             <Footer/>

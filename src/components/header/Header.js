@@ -14,34 +14,44 @@ export default function Header() {
     const router = useRouter();
 
     return (
-        <div className="w-full h-72 bg-black-100">
-            <div className="max-w-1080 h-full mx-auto flex justify-between items-center">
-                <Image
-                    onClick={() => router.push("/")}
-                    src="/static/images/logo.png"
-                    className="object-contain w-124 h-28"
-                />
-                <div className="flex items-center">
-                    {menu.map((item, index) => (
-                        <Button
-                            onClick={() => router.push(item.link)}
-                            className={`text-base text-bold leading1 text-white ${index > 0 && "ml-40"}`}
-                            key={index.toString()}
-                        >
-                            {item.title}
-                        </Button>
-                    ))}
+        <>
+            <div className="w-full h-72 bg-black-100 desktop:min-w-1440 mobile:min-w-360">
+                <div className="max-w-1080 h-full mx-auto flex justify-between items-center mobile:hidden">
+                    <Image
+                        onClick={() => router.push("/")}
+                        src="/static/images/logo.png"
+                        className="object-contain w-124 h-28"
+                    />
+                    <div className="flex items-center">
+                        {menu.map((item, index) => (
+                            <Button
+                                onClick={() => router.push(item.link)}
+                                className={`text-base text-bold leading1 text-white ${index > 0 && "ml-40"}`}
+                                key={index.toString()}
+                            >
+                                {item.title}
+                            </Button>
+                        ))}
 
-                    <Button
-                        whileTap={{
-                            scale: 0.9
-                        }}
-                        className="ml-40 rounded-22 bg-blue-700 w-108 h-44 flex items-center justify-center text-white leading1">
-                        문의하기
-                    </Button>
+                        <Button
+                            whileTap={{
+                                scale: 0.9
+                            }}
+                            className="ml-40 rounded-22 bg-blue-700 w-108 h-44 flex items-center justify-center text-white leading1">
+                            문의하기
+                        </Button>
+                    </div>
+                </div>
+
+                <div className="desktop:hidden w-full h-60 flex items-center px-20">
+                    <Image
+                        onClick={() => router.push("/")}
+                        src="/static/images/logo.png"
+                        className="object-contain w-100 h-24"
+                    />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
