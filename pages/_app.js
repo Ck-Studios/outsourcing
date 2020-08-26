@@ -1,10 +1,18 @@
 import '../styles/globals.css'
 import "styles/index.css";
+import {Provider} from "react-redux";
+import {useStore} from "client/store/store";
+import Menu from "components/menu/Menu";
+import {useState, useEffect} from "react";
 
 function MyApp({Component, pageProps}) {
+    const store = useStore(pageProps.initialReduxState);
+
     return (
         <>
-            <Component {...pageProps} />
+            <Provider store={store}>
+                <Component {...pageProps} />
+            </Provider>
             <style global jsx>
                 {
                     `

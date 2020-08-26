@@ -1,6 +1,8 @@
 import Header from "components/header/Header";
 import Footer from "components/footer/footer";
 import Inquire from "components/inquire/Inquire";
+import {useSelector} from "react-redux";
+import Menu from "components/menu/Menu";
 
 const process = [
     "홈페이지 상담 신청",
@@ -15,8 +17,13 @@ const process = [
 ]
 
 export default function ProcessContainer() {
+    const isOpened = useSelector(state => state.common.openMenu);
     return (
         <>
+            {
+                isOpened &&
+                    <Menu/>
+            }
             <Header/>
             <div className="w-full bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 mx-auto py-120 flex justify-between items-center">

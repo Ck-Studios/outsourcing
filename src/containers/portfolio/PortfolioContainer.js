@@ -1,10 +1,17 @@
 import Header from "components/header/Header";
 import Inquire from "components/inquire/Inquire";
 import Footer from "components/footer/footer";
+import {useSelector} from "react-redux";
+import Menu from "components/menu/Menu";
 
 export default function PortfolioContainer() {
+    const isOpened = useSelector(state => state.common.openMenu);
     return (
         <>
+            {
+                isOpened &&
+                    <Menu/>
+            }
             <Header/>
             <div className="w-full py-80 bg-black-100 desktop:min-w-1440">
                 <div className="max-w-1080 h-full flex justify-between items-center mx-auto">

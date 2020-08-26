@@ -1,6 +1,8 @@
 import {useRouter} from "next/router";
 import styled from "styled-components";
 import {motion} from "framer-motion";
+import {useDispatch} from "react-redux";
+import {openMenu} from "modules/common";
 
 const menu = [
     {title: "소개", link: "/"},
@@ -12,6 +14,7 @@ const menu = [
 
 export default function Header() {
     const router = useRouter();
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -43,12 +46,17 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className="desktop:hidden w-full h-60 flex items-center px-20">
+                <div className="desktop:hidden w-full h-60 flex justify-between items-center px-20">
                     <Image
                         onClick={() => router.push("/")}
                         src="/static/images/logo.png"
                         className="object-contain w-100 h-24"
                     />
+                    <div
+                        className="w-32 h-32 bg-pink-500"
+                        onClick={() => dispatch(openMenu())}
+                    />
+
                 </div>
             </div>
         </>
