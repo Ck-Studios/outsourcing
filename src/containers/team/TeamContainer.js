@@ -3,20 +3,16 @@ import Footer from "components/footer/footer";
 import Inquire from "components/inquire/Inquire";
 import {useSelector} from "react-redux";
 import Menu from "components/menu/Menu";
+import LayoutWrapper from "components/common/layout/LayoutWrapper";
 
 export default function TeamContainer() {
     const isOpened = useSelector(state => state.common.openMenu);
     return (
-        <>
-            {
-                isOpened &&
-                <Menu/>
-            }
-            <Header/>
+        <LayoutWrapper>
             <div className="w-full bg-black-100 desktop:min-w-1440">
-                <div className="max-w-1080 mx-auto pt-80 pb-170 flex justify-between items-center">
-                    <div className="pt-50">
-                        <h1 className="text-40 text-white font-bold">
+                <div className="max-w-1080 mx-auto desktop:pt-80 desktop:pb-170 flex justify-between items-center mobile:block mobile:px-20">
+                    <div className="pt-50 mobile:pt-40">
+                        <h1 className="text-40 mobile:text-32 text-white font-bold">
                             스타트업 출신<br/>
                             내부 전문 인력과 함께.
                         </h1>
@@ -27,7 +23,7 @@ export default function TeamContainer() {
                     </div>
                     <img
                         src="/static/images/team/team.png"
-                        className="w-420 h-334"
+                        className="w-420 h-334 object-contain mobile:w-full mobile:h-240"
                     />
                 </div>
             </div>
@@ -93,7 +89,6 @@ export default function TeamContainer() {
             <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440">
                 <Inquire/>
             </div>
-            <Footer/>
-        </>
+        </LayoutWrapper>
     )
 }

@@ -3,6 +3,7 @@ import Footer from "components/footer/footer";
 import Inquire from "components/inquire/Inquire";
 import {useSelector} from "react-redux";
 import Menu from "components/menu/Menu";
+import LayoutWrapper from "components/common/layout/LayoutWrapper";
 
 const process = [
     "홈페이지 상담 신청",
@@ -17,39 +18,37 @@ const process = [
 ]
 
 export default function ProcessContainer() {
-    const isOpened = useSelector(state => state.common.openMenu);
     return (
-        <>
-            {
-                isOpened &&
-                    <Menu/>
-            }
-            <Header/>
+        <LayoutWrapper>
             <div className="w-full bg-black-100 desktop:min-w-1440">
-                <div className="max-w-1080 mx-auto py-120 flex justify-between items-center">
+                <div className="max-w-1080 mx-auto desktop:py-120 mobile:pt-40 flex justify-between items-center mobile:block mobile:px-20">
                     <div>
-                        <h1 className="text-40 text-white font-bold">
+                        <h1 className="text-40 mobile:text-32 mobile:leading-1.3 text-white font-bold">
                             성공적인 협업을 위한<br/>
                             깔끔한 프로세스.
                         </h1>
-                        <p className="text-base text-white mt-20 leading-1.75">
+                        <p className="text-base mobile:text-14 text-white mt-20 leading-1.75">
                             개발을 통해 얻고자 하는 것이 무엇인지 분명히 하고<br/>
                             가장 효율적인 방식으로 진행합니다.
                         </p>
                     </div>
                     <img
                         src="/static/images/process/process.png"
-                        className="w-440 h-345"
+                        className="w-440 h-345 object-contain mobile:w-full mobile:h-240 mobile:mt-80"
                     />
                 </div>
             </div>
             <div className="w-full bg-black-200 desktop:min-w-1440">
-                <div className="max-w-1080 mx-auto py-100 flex justify-between items-center flex-wrap">
+                <div className="max-w-1080 mx-auto py-100 mobile:py-80 mobile:flex-col flex justify-between items-center flex-wrap relative overflow-hidden mobile:box-content">
+                    <div
+                        className="desktop:hidden w-px bg-white absolute z-0"
+                        style={{height: "85%"}}
+                    />
                     {
                         process.map((item, index) => (
                             <div
                                 key={index.toString()}
-                                className={`w-320 h-100 rounded-full border-white border ${index > 2 && "mt-60"} text-20 text-white flex justify-center items-center`}
+                                className={`w-320 h-100 rounded-full border-white border desktop:${index > 2 && "mt-60"} text-20 text-white flex justify-center items-center mobile:${index > 0 && "mt-40"} bg-black-200 relative z-10`}
                             >
                                 {index + 1}. &nbsp;
                                 {item}
@@ -58,10 +57,9 @@ export default function ProcessContainer() {
                     }
                 </div>
             </div>
-            <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440">
+            <div className="w-full bg-black-100 pt-140 pb-160 desktop:min-w-1440 mobile:px-20 mobile:py-80">
                 <Inquire/>
             </div>
-            <Footer/>
-        </>
+        </LayoutWrapper>
     )
 }

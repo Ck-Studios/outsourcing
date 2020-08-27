@@ -1,6 +1,42 @@
 const defaultEase = [0.48, 0.15, 0.25, 0.48];
 
-export const SCALE_UP = (delay=0) => ({
+export const BORDERED_SCALE_UP = (delay=0, duration=0.5) => ({
+    initial: {
+        opacity: 0.7,
+        width: 250,
+        height: 250,
+        scale: 0.5,
+        borderRadius: "50%",
+    },
+
+    animate: {
+        opacity: 1,
+        scale: 1,
+        width: "100%",
+        height: "100%",
+        borderRadius: 0,
+        transition: {
+            delay,
+            duration,
+            ease: defaultEase
+        },
+    },
+
+    exit: {
+        opacity: 0.7,
+        scale: 0.5,
+        width: 250,
+        height: 250,
+        borderRadius: "50%",
+        transition: {
+            delay,
+            duration,
+            ease: defaultEase
+        }
+    }
+})
+
+export const SCALE_UP = (delay=0, duration=0.5) => ({
     initial: {
         opacity: 0,
         scale: 0.5,
@@ -10,14 +46,16 @@ export const SCALE_UP = (delay=0) => ({
         scale: 1,
         transition: {
             delay,
-            duration: 0.8, ease: defaultEase
+            duration,
+            ease: defaultEase
         }
     },
     exit: {
         opacity: 1,
         scale: 0.7,
         transition: {
-            duration: 0.5, ease: defaultEase
+            duration: duration,
+            ease: defaultEase
         }
     }
 })

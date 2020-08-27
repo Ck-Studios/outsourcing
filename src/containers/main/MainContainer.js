@@ -7,17 +7,13 @@ import IntersectionView from "components/common/layout/IntersectionView";
 import IntersectionObserver from "components/common/utils/IntersectionObserver";
 import {useSelector} from "react-redux";
 import Menu from "components/menu/Menu";
+import LayoutWrapper from "components/common/layout/LayoutWrapper";
 
 export default function MainContainer() {
     const isOpened = useSelector(state => state.common.openMenu);
 
     return (
-        <>
-            {
-                isOpened &&
-                    <Menu/>
-            }
-            <Header/>
+        <LayoutWrapper>
             <div className="w-full desktop:h-700 bg-black-100 desktop:min-w-1440 mobile:pt-40">
                 <div className="h-full flex desktop:justify-center desktop:items-center desktop:mx-auto mobile:px-20 mobile:flex-col">
                     <motion.img
@@ -338,7 +334,6 @@ export default function MainContainer() {
             <div className="w-full bg-black-100 pt-275 pb-160 desktop:min-w-1440 mobile:py-80 mobile:px-20">
                 <Inquire/>
             </div>
-            <Footer/>
-        </>
+        </LayoutWrapper>
     )
 }

@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import {useStore} from "client/store/store";
 import Menu from "components/menu/Menu";
 import {useState, useEffect} from "react";
+import "swiper/swiper-bundle.min.css"
 
 function MyApp({Component, pageProps}) {
     const store = useStore(pageProps.initialReduxState);

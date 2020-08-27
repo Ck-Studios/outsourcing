@@ -1,8 +1,9 @@
 import {useRouter} from "next/router";
 import styled from "styled-components";
-import {motion} from "framer-motion";
-import {useDispatch} from "react-redux";
-import {openMenu} from "modules/common";
+import {motion, useCycle} from "framer-motion";
+import {useDispatch, useSelector} from "react-redux";
+import {closeMenu, openMenu} from "modules/common";
+import {ToggleMenu} from "common/ToggleMenu";
 
 const menu = [
     {title: "소개", link: "/"},
@@ -12,9 +13,11 @@ const menu = [
     {title: "사람들", link: "/team"},
 ]
 
-export default function Header() {
+export default function Header(props) {
     const router = useRouter();
     const dispatch = useDispatch();
+    const isOpened = useSelector(state => state?.common?.openMenu);
+
 
     return (
         <>
@@ -52,9 +55,13 @@ export default function Header() {
                         src="/static/images/logo.png"
                         className="object-contain w-100 h-24"
                     />
-                    <div
-                        className="w-32 h-32 bg-pink-500"
-                        onClick={() => dispatch(openMenu())}
+                    {/*<div*/}
+                    {/*    className="w-32 h-32 bg-pink-500"*/}
+                    {/*    onClick={() => dispatch(openMenu())}*/}
+                    {/*/>*/}
+                    <ToggleMenu
+                        toggle={isOpened ? () => dispatch(closeMenu()) : () => dispatch(openMenu())}
+                        isOpened={isOpened}
                     />
 
                 </div>

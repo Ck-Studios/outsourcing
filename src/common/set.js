@@ -4,4 +4,5 @@ export const MENU_SET = [
     {title: "진행방식", path: "/process"},
     {title: "서비스 안내", path: "/service"},
     {title: "사람들", path: "/team"},
+    {title: "문의하기", path: null, type: "button"}
 ]
