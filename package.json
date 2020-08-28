@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "@zeit/next-source-maps": "^0.0.3",
     "autoprefixer": "^9.8.6",
     "framer-motion": "^2.4.3-beta.2",
@@ -25,6 +26,7 @@
     "react-use": "^15.3.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "sass": "^1.26.10",
     "styled-components": "^5.1.1",
     "swiper": "^6.1.2",
     "tailwindcss": "^1.6.2"

@@ -1,0 +1,12 @@
+
+@media screen and (min-width: 360px) and (max-width: 500px){
+    .horizon-divider {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .horizon-divider {
+        width: 70%;
+    }
+}

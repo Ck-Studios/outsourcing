@@ -19,7 +19,6 @@ function MyApp({Component, pageProps}) {
                     `
                     #__next {
                         width: 100%;
-                        height: 100%;
                         overflow: scroll;
                     }
                     #__next-build-watcher,
