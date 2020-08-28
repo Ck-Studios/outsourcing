@@ -20,7 +20,7 @@ const process = [
 export default function ProcessContainer() {
     return (
         <LayoutWrapper>
-            <div className="w-full bg-black-100 desktop:min-w-1440">
+            <div className="w-full bg-black-100 desktop:min-w-1440 mobile:min-w-360">
                 <div className="max-w-1080 mx-auto desktop:py-120 mobile:pt-40 flex justify-between items-center mobile:block mobile:px-20">
                     <div>
                         <h1 className="text-40 mobile:text-32 mobile:leading-1.3 text-white font-bold">
