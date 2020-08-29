@@ -1,10 +1,66 @@
+import {useState, useEffect} from "react";
+import {axiosClient} from "client/network/axiosClient";
 import IntersectionObserver from "components/common/utils/IntersectionObserver";
 import IntersectionView from "components/common/layout/IntersectionView";
 import {FADE_IN, SLIDE_UP2} from "components/common/animation/Animation";
 import {motion} from "framer-motion";
 import styled from "styled-components";
-
+// {
+//     "email": "rlatla456@naver.com",
+//     "name": "김심원",
+//     "phone": "01094971722",
+//     "content": "This is Test"
+// }
 export default function Inquire() {
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [name, setName] = useState("");
+    const [content, setContent] = useState("");
+
+    const clearForm = () => {
+        setEmail("");
+        setPhone("");
+        setName("");
+        setContent("");
+    }
+
+    const sendSuccess = () => {
+        clearForm();
+        alert("문의를 남겨주셔서 감사합니다. 곧 연락 드리겠습니다!");
+    }
+    const sendFail = () => {
+        clearForm();
+        alert("서버 오류가 발생했습니다. 다시 시도해주시면 감사드리겠습니다.")
+    }
+
+    const sendEmail = () => {
+        if(!email.length) {
+            alert("이메일을 입력해주세요!");
+            return;
+        }
+        if(!phone.length) {
+            alert("핸드폰 번호를 입력해주세요!");
+            return;
+        }
+        if(!name.length) {
+            alert("이름을 입력해주세요!");
+            return;
+        }
+        if(!content.length) {
+            alert("문의 내용을 입력해주세요!");
+            return;
+        }
+
+        const form = {
+            email,
+            phone,
+            name,
+            content,
+        }
+        axiosClient.post("/mail", form)
+            .then((res) => sendSuccess())
+            .catch((err) => console.log("err", err));
+    }
     return (
         <IntersectionObserver>
             <div className="max-w-1080 mx-auto">
@@ -45,6 +101,8 @@ export default function Inquire() {
                                 <input
                                     type="text"
                                     className="w-full h-full bg-transparent outline-none text-white"
+                                    onChange={e => setName(e.target.value)}
+                                    value={name}
                                 />
                             </div>
                         </div>
@@ -57,6 +115,8 @@ export default function Inquire() {
                                 <input
                                     type="text"
                                     className="w-full h-full bg-transparent outline-none text-white"
+                                    onChange={e => setPhone(e.target.value)}
+                                    value={phone}
                                 />
                             </div>
                         </div>
@@ -69,6 +129,8 @@ export default function Inquire() {
                             <input
                                 type="text"
                                 className="w-full h-full bg-transparent outline-none text-white"
+                                onChange={e => setEmail(e.target.value)}
+                                value={email}
                             />
                         </div>
                     </div>
@@ -79,6 +141,8 @@ export default function Inquire() {
                         <div className="w-full h-160 bg-black-200 px-2">
                                 <textarea
                                     className="w-full h-full bg-transparent outline-none text-white resize-none"
+                                    onChange={e => setContent(e.target.value)}
+                                    value={content}
                                 />
                         </div>
                     </div>
@@ -88,6 +152,7 @@ export default function Inquire() {
                         scale: 0.9
                     }}
                     className="w-180 h-60 mobile:w-160 mobile:h-54 bg-blue-700 mt-48 rounded-30 flex justify-center items-center text-18 mobile:text-base leading-1 font-bold text-white "
+                    onClick={() => sendEmail()}
                 >
                     보내기
                 </Button>

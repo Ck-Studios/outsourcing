@@ -123,15 +123,15 @@ export default function TeamContainer() {
                         </div>
                         <div
                             className="w-180 h-80 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-32 relative z-10">
-                            프론트엔드 개발자
+                            웹 프론트엔드 개발자
                         </div>
                         <div
                             className="w-180 h-80 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-32 relative z-10">
-                            백엔드 개발자1
+                            앱 개발자
                         </div>
                         <div
                             className="w-180 h-80 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-32 relative z-10">
-                            백엔드 개발자2
+                            백엔드 개발자
                         </div>
                     </div>
                     <div
