@@ -1,16 +1,14 @@
-import Header from "components/header/Header";
-import Footer from "components/footer/footer";
 import Inquire from "components/inquire/Inquire";
 import {motion} from "framer-motion";
 import {SCALE_UP, SLIDE_LEFT, SLIDE_UP, SLIDE_UP2, FADE_IN} from "components/common/animation/Animation";
 import IntersectionView from "components/common/layout/IntersectionView";
 import IntersectionObserver from "components/common/utils/IntersectionObserver";
 import {useSelector} from "react-redux";
-import Menu from "components/menu/Menu";
 import LayoutWrapper from "components/common/layout/LayoutWrapper";
+import {useRouter} from "next/router";
 
 export default function MainContainer() {
-    const isOpened = useSelector(state => state.common.openMenu);
+    const router = useRouter();
 
     return (
         <LayoutWrapper>
@@ -132,7 +130,9 @@ export default function MainContainer() {
                                         Android 앱<br/>
                                         웹서비스
                                     </div>
-                                    <a className="block mt-40">
+                                    <a className="block mt-40"
+                                        onClick={() => router.push("/service")}
+                                    >
                                         <motion.span
                                             className="text-white text-base font-bold" style={{
                                             background: "linear-gradient(to right, #1bacff, #1d5aff, #764aff)",
@@ -163,7 +163,9 @@ export default function MainContainer() {
                                         로고/브랜딩<br/>
                                         영상/모션
                                     </div>
-                                    <a className="block mt-40">
+                                    <a className="block mt-40"
+                                       onClick={() => router.push("/service")}
+                                    >
                             <span className="text-white text-base font-bold" style={{
                                 background: "linear-gradient(to right, #1bacff, #1d5aff, #764aff)",
                                 "-webkit-background-clip": "text",
@@ -193,7 +195,9 @@ export default function MainContainer() {
                                         GTM/픽셀 세팅<br/>
                                         디지털광고
                                     </div>
-                                    <a className="block mt-40">
+                                    <a className="block mt-40"
+                                       onClick={() => router.push("/service")}
+                                    >
                             <span className="text-white text-base font-bold" style={{
                                 background: "linear-gradient(to right, #1bacff, #1d5aff, #764aff)",
                                 "-webkit-background-clip": "text",
