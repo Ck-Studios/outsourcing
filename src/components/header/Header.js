@@ -43,6 +43,7 @@ export default function Header(props) {
                             whileTap={{
                                 scale: 0.9
                             }}
+                            onClick={() => window?.scrollTo(0,document?.body?.scrollHeight)}
                             className="ml-40 rounded-22 bg-blue-700 w-108 h-44 flex items-center justify-center text-white leading1">
                             문의하기
                         </Button>
