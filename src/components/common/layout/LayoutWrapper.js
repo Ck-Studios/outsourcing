@@ -16,7 +16,6 @@ export default function LayoutWrapper({children}) {
     const containerRef = useRef(null);
     const dispatch = useDispatch();
     // const {height} = useDimensions(containerRef);
-    console.log("height:::::::::: ", height)
 
     useEffect(() => {
         if (window) {
