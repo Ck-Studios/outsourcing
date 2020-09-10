@@ -68,7 +68,7 @@ export default function ServiceContainer() {
                                 devServices.map((item, index) => (
                                     <div
                                         key={index.toString()}
-                                        className={`w-201 h-201 mobile:w-140 mobile:h-140 rounded-full flex justify-center items-center desktop:${index > 0 && index !== 3 && "ml-40"} desktop:${index >= 3 && "mt-32"} mobile:${index > 0 && "mt-20"}`}
+                                        className={`w-201 h-201 mobile:w-140 mobile:h-140 rounded-full flex justify-center items-center ${index > 0 && index !== 3 ? "desktop:ml-40" : null} ${index >= 3 ? "desktop:mt-32" : null} ${index > 0 ? "mobile:mt-20" : null}`}
                                         style={{
                                             background: "linear-gradient(to right, #1bacff, #1d5aff, #8a48ff)"
                                         }}

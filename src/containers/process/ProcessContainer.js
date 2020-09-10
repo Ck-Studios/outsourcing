@@ -48,7 +48,7 @@ export default function ProcessContainer() {
                         process.map((item, index) => (
                             <div
                                 key={index.toString()}
-                                className={`w-320 h-100 rounded-full border-white border desktop:${index > 2 && "mt-60"} text-20 text-white flex justify-center items-center mobile:${index > 0 && "mt-40"} bg-black-200 relative z-10`}
+                                className={`w-320 h-100 rounded-full border-white border ${index > 2 ? "desktop:mt-60" : null} text-20 text-white flex justify-center items-center ${index > 0 ? "mobile:mt-40" : null} bg-black-200 relative z-10`}
                             >
                                 {index + 1}. &nbsp;
                                 {item}
