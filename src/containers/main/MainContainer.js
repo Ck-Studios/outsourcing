@@ -229,7 +229,7 @@ export default function MainContainer() {
                                     variants={FADE_IN(0.5)}
                                     className="mobile:text-14 leading2 text-white text-base mt-26 mobile:mt-20"
                                 >
-                                    우리는 클라이언트의 니즈를 깊이 이해하고,
+                                    우리는 클라이언트의 니즈를 깊이 이해하고,<br className="mobile:hidden"/>
                                     전문가 입장에서 더욱 효율적이고 창의적인 솔루션을 제안합니다.
                                 </p>
                                 <a className="block mt-80 mobile:mt-40">
