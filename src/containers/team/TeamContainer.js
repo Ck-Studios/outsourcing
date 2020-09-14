@@ -56,7 +56,7 @@ export default function TeamContainer() {
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40 mr-60">
-                            프론트엔드 개발자
+                            웹 프론트엔드 개발자
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40 mr-60">
@@ -68,7 +68,7 @@ export default function TeamContainer() {
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40 mr-60">
-                            백엔드 개발자1
+                            백엔드 개발자
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40 mr-60">
@@ -80,7 +80,7 @@ export default function TeamContainer() {
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40 mr-60">
-                            백엔드 개발자2
+                            앱 개발자
                         </div>
                         <div
                             className="w-220 h-100 rounded-full bg-black-200 border border-white flex justify-center items-center text-white font-bold mt-40">
