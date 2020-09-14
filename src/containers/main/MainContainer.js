@@ -232,7 +232,10 @@ export default function MainContainer() {
                                     우리는 클라이언트의 니즈를 깊이 이해하고,<br className="mobile:hidden"/>
                                     전문가 입장에서 더욱 효율적이고 창의적인 솔루션을 제안합니다.
                                 </p>
-                                <a className="block mt-80 mobile:mt-40">
+                                <a
+                                    className="block mt-80 mobile:mt-40"
+                                    onClick={() => router.push("/portfolio")}
+                                >
                                     <IntersectionView
                                         variants={FADE_IN(1)}
                                         className="text-white text-base font-bold" style={{

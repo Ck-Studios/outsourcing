@@ -7,12 +7,22 @@ import {useState, useEffect} from "react";
 import "swiper/swiper-bundle.min.css"
 import {setAuthToken} from "client/network/axiosClient";
 import Head from "next/head";
+import {useRouter} from "next/router";
 
 function MyApp({Component, pageProps}) {
     const store = useStore(pageProps.initialReduxState);
+    const router = useRouter();
+    console.log("router::: ", router);
+
     useEffect(() => {
         setAuthToken();
     }, []);
+
+    useEffect(() => {
+        if(window) {
+            window.scroll(0, 1)
+        }
+    }, [router.pathname])
     return (
         <>
             <Head>
@@ -33,6 +43,10 @@ function MyApp({Component, pageProps}) {
                     #__next-build-watcher,
                     #__next-prerender-indicator {
                         display: none !important;
+                    }
+                    
+                    a:hover {
+                        cursor: pointer;
                     }
                     `
                 }

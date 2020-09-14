@@ -17,7 +17,7 @@ export default function Footer() {
                     (주)시냅스코퍼레이션 | 대표 박찬규<br/>
                     서울특별시 서초구 강남대로 527 12층 1209호<br/>
                     사업자등록번호 : 412-87-01955<br/>
-                    0to1.zip@gmail.com<br/>
+                    info@synapsecorp.kr<br/>
                     Copyright ⓒ Synapse Corp. All rights reserved.
                 </p>
             </div>
