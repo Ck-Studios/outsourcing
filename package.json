@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/plugin-proposal-do-expressions": "^7.10.4",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-source-maps": "^0.0.3",
@@ -21,6 +22,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dom": "16.13.1",
     "react-id-swiper": "^4.0.0",
     "react-redux": "^7.2.1",
@@ -32,5 +34,19 @@
     "styled-components": "^5.1.1",
     "swiper": "^6.1.2",
     "tailwindcss": "^1.6.2"
+  },
+
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
   }
 }

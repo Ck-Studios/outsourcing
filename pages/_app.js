@@ -1,9 +1,11 @@
-import '../styles/globals.css'
+import "react-app-polyfill/ie9";
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
+import "../styles/globals.css"
 import "styles/index.css";
 import {Provider} from "react-redux";
 import {useStore} from "client/store/store";
-import Menu from "components/menu/Menu";
-import {useState, useEffect} from "react";
+import {useEffect} from "react";
 import "swiper/swiper-bundle.min.css"
 import {setAuthToken} from "client/network/axiosClient";
 import Head from "next/head";
@@ -12,7 +14,6 @@ import {useRouter} from "next/router";
 function MyApp({Component, pageProps}) {
     const store = useStore(pageProps.initialReduxState);
     const router = useRouter();
-    console.log("router::: ", router);
 
     useEffect(() => {
         setAuthToken();
